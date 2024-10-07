@@ -1,0 +1,89 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+}
+
+android {
+    namespace 'com.example.winiychat'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.example.winiychat"
+        minSdk 26
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    viewBinding {
+        enable = true
+    }
+    //javaEmail
+    packagingOptions {
+        pickFirst 'META-INF/LICENSE.md' // picks the JavaMail license file
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/NOTICE.md'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude("META-INF/*.kotlin_module")
+    }
+}
+
+dependencies {
+    //BaseRecyclerViewAdapterHelper4
+    implementation "io.github.cymchad:BaseRecyclerViewAdapterHelper4:4.1.4"
+    //javaEmail
+    implementation 'com.sun.mail:android-mail:1.6.7'
+    implementation 'com.sun.mail:android-activation:1.6.7'
+    //recyclerviewAnimation
+    implementation("jp.wasabeef:recyclerview-animators:4.0.2")
+    //smartLayout
+    implementation("androidx.appcompat:appcompat:1.0.0")
+    implementation("io.github.scwang90:refresh-layout-kernel:2.1.0")    //核心必须依赖
+    implementation("io.github.scwang90:refresh-header-classics:2.1.0")    //经典刷新头
+    implementation("io.github.scwang90:refresh-header-radar:2.1.0")       //雷达刷新头
+    implementation("io.github.scwang90:refresh-header-falsify:2.1.0")     //虚拟刷新头
+    implementation("io.github.scwang90:refresh-header-material:2.1.0")    //谷歌刷新头
+    implementation("io.github.scwang90:refresh-header-two-level:2.1.0")   //二级刷新头
+    implementation("io.github.scwang90:refresh-footer-ball:2.1.0")        //球脉冲加载
+    implementation("io.github.scwang90:refresh-footer-classics:2.1.0")    //经典加载
+    //toaster
+    //implementation("com.github.getActivity:Toaster:12.6")
+    //retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.11.0'
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.16.0'
+    //rxjava3
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+    implementation 'io.reactivex.rxjava3:rxjava:3.1.5'
+    implementation libs.androidx.core.ktx
+    implementation libs.androidx.appcompat
+    implementation libs.material
+    implementation libs.androidx.activity
+    implementation libs.androidx.constraintlayout
+    implementation libs.androidx.navigation.fragment.ktx
+    implementation libs.androidx.navigation.ui.ktx
+    testImplementation libs.junit
+    androidTestImplementation libs.androidx.junit
+    androidTestImplementation libs.androidx.espresso.core
+}

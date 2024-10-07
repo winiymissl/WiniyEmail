@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/inBoxFragment">
+    <fragment
+        android:id="@+id/inBoxFragment"
+        android:name="com.example.winiychat.view.fragment.InBoxFragment"
+        android:label="fragment_in_box"
+        tools:layout="@layout/fragment_in_box" />
+    <fragment
+        android:id="@+id/personalFragment"
+        android:name="com.example.winiychat.view.fragment.PersonalFragment"
+        android:label="fragment_personal"
+        tools:layout="@layout/fragment_personal" />
+    <fragment
+        android:id="@+id/contactsFragment"
+        android:name="com.example.winiychat.view.fragment.ContactsFragment"
+        android:label="fragment_contacts"
+        tools:layout="@layout/fragment_contacts" />
+</navigation>
