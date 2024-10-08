@@ -8,7 +8,11 @@
         android:id="@+id/inBoxFragment"
         android:name="com.example.winiychat.view.fragment.InBoxFragment"
         android:label="fragment_in_box"
-        tools:layout="@layout/fragment_in_box" />
+        tools:layout="@layout/fragment_in_box">
+        <action
+            android:id="@+id/action_inBoxFragment_to_emailDetailFragment"
+            app:destination="@id/emailDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/personalFragment"
         android:name="com.example.winiychat.view.fragment.PersonalFragment"
@@ -19,4 +23,9 @@
         android:name="com.example.winiychat.view.fragment.ContactsFragment"
         android:label="fragment_contacts"
         tools:layout="@layout/fragment_contacts" />
+    <fragment
+        android:id="@+id/emailDetailFragment"
+        android:name="com.example.winiychat.view.fragment.email.EmailDetailFragment"
+        android:label="fragment_email_detail"
+        tools:layout="@layout/fragment_email_detail" />
 </navigation>
