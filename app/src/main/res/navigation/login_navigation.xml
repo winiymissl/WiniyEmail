@@ -3,11 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_navigation"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/configFragment3">
 
     <fragment
+        android:id="@+id/configFragment3"
+        android:name="com.example.winiychat.view.activity.login.LoginConfigFragment"
+        android:label="ConfigFragment">
+        <action
+            android:id="@+id/action_configFragment3_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.winiychat.view.activity.login.LoginFragment"
+        android:name="com.example.winiychat.view.activity.login.ConfigSuccessLoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_config_success_login" />
 </navigation>

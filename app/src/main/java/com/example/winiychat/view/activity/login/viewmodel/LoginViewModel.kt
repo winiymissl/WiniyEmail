@@ -7,7 +7,7 @@ import android.util.Patterns
 import com.example.winiychat.model.repository.local.LoginRepository
 import com.example.winiychat.view.activity.login.data.Result
 
-import com.example.winiychat.view.activity.login.R
+import com.example.winiychat.R
 import com.example.winiychat.view.activity.login.data.LoginFormState
 import com.example.winiychat.view.activity.login.data.model.LoggedInUserView
 import com.example.winiychat.view.activity.login.data.LoginResult

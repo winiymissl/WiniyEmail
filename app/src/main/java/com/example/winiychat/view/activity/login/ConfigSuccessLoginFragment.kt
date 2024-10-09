@@ -12,19 +12,17 @@ import android.view.ViewGroup
 import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.winiychat.databinding.FragmentLoginBinding
 import com.example.winiychat.R
+import com.example.winiychat.databinding.FragmentConfigSuccessLoginBinding
 import com.example.winiychat.view.activity.login.data.model.LoggedInUserView
 import com.example.winiychat.view.activity.login.viewmodel.LoginViewModel
 import com.example.winiychat.view.activity.login.viewmodel.LoginViewModelFactory
 
-class LoginFragment : Fragment() {
+class ConfigSuccessLoginFragment : Fragment() {
 
     private lateinit var loginViewModel: LoginViewModel
-    private var _binding: FragmentLoginBinding? = null
+    private var _binding: FragmentConfigSuccessLoginBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -32,15 +30,14 @@ class LoginFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        _binding = FragmentConfigSuccessLoginBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loginViewModel = ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
+        loginViewModel =
+            ViewModelProvider(this, LoginViewModelFactory())[LoginViewModel::class.java]
 
         val usernameEditText = binding.username
         val passwordEditText = binding.password
