@@ -36,13 +36,12 @@ class InBoxRecyclerviewAdapter() : BaseQuickAdapter<InBoxRecyclerviewBean, MyVie
         return MyViewHolder(binding)
     }
 
-
     class MyViewHolder(val _binding: ItemRecyclerviewMessageBinding) : ViewHolder(_binding.root) {
         private fun getAnimation(view: View): AnimatorSet {
-            val xAnimator = ObjectAnimator.ofFloat(view, "scaleX", 1f, 0.5f)
-            val yAnimator = ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.5f)
-            val xAnimator_ = ObjectAnimator.ofFloat(view, "scaleX", 0.5f, 1f)
-            val yAnimator_ = ObjectAnimator.ofFloat(view, "scaleY", 0.5f, 1f)
+            val xAnimator = ObjectAnimator.ofFloat(view, "scaleX", 1f, 0.8f)
+            val yAnimator = ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.8f)
+            val xAnimator_ = ObjectAnimator.ofFloat(view, "scaleX", 0.8f, 1f)
+            val yAnimator_ = ObjectAnimator.ofFloat(view, "scaleY", 0.8f, 1f)
             val animatorSet = AnimatorSet()
             val animatorSet_ = AnimatorSet()
             val animatorSet__ = AnimatorSet()

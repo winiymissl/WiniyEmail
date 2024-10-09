@@ -1,9 +1,9 @@
-package com.example.winiychat.http.state
+package com.example.winiychat.view.activity.login.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.winiychat.view.fragment.login.data.LoginDataSource
-import com.example.winiychat.view.fragment.login.data.LoginRepository
+import com.example.winiychat.model.repository.remote.LoginDataSource
+import com.example.winiychat.model.repository.local.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

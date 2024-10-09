@@ -1,4 +1,6 @@
-package com.example.winiychat.view.fragment.login.ui
+package com.example.winiychat.view.activity.login.data
+
+import com.example.winiychat.view.activity.login.data.model.LoggedInUserView
 
 /**
  * Authentication result : success (user details) or error message.

@@ -1,6 +1,8 @@
-package com.example.winiychat.view.fragment.login.data
+package com.example.winiychat.model.repository.local
 
-import com.example.winiychat.view.fragment.login.data.model.LoggedInUser
+import com.example.winiychat.model.bean.LoggedInUserConfig
+import com.example.winiychat.model.repository.remote.LoginDataSource
+import com.example.winiychat.view.activity.login.data.Result
 
 /**
  * Class that requests authentication and user information from the remote data source and
@@ -10,7 +12,7 @@ import com.example.winiychat.view.fragment.login.data.model.LoggedInUser
 class LoginRepository(val dataSource: LoginDataSource) {
 
     // in-memory cache of the loggedInUser object
-    var user: LoggedInUser? = null
+    var user: LoggedInUserConfig? = null
         private set
 
     val isLoggedIn: Boolean
@@ -27,7 +29,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         dataSource.logout()
     }
 
-    fun login(username: String, password: String): Result<LoggedInUser> {
+    fun login(username: String, password: String): Result<LoggedInUserConfig> {
         // handle login
         val result = dataSource.login(username, password)
 
@@ -38,7 +40,7 @@ class LoginRepository(val dataSource: LoginDataSource) {
         return result
     }
 
-    private fun setLoggedInUser(loggedInUser: LoggedInUser) {
+    private fun setLoggedInUser(loggedInUser: LoggedInUserConfig) {
         this.user = loggedInUser
         // If user credentials will be cached in local storage, it is recommended it be encrypted
         // @see https://developer.android.com/training/articles/keystore

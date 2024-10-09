@@ -1,7 +1,8 @@
-package com.example.winiychat.view.activity
+package com.example.winiychat.view.activity.main
 
 import android.os.Build
 import android.os.Bundle
+import android.transition.Fade
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -12,6 +13,7 @@ import androidx.navigation.findNavController
 import com.example.winiychat.R
 import com.example.winiychat.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationBarView
+import com.google.android.material.transition.platform.MaterialFade
 
 class MainActivity : AppCompatActivity() {
     private val binding: ActivityMainBinding by lazy {
@@ -20,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         enableEdgeToEdge()
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->

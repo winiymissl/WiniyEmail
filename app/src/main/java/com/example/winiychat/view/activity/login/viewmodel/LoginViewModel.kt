@@ -1,16 +1,16 @@
-package com.example.winiychat.http.state
+package com.example.winiychat.view.activity.login.viewmodel
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.example.winiychat.view.fragment.login.ui.LoggedInUserView
-import com.example.winiychat.view.fragment.login.ui.LoginFormState
-import com.example.winiychat.view.fragment.login.ui.LoginResult
-import com.example.winiychat.view.fragment.login.data.LoginRepository
-import com.example.winiychat.view.fragment.login.data.Result
+import com.example.winiychat.model.repository.local.LoginRepository
+import com.example.winiychat.view.activity.login.data.Result
 
-import com.example.winiychat.view.fragment.login.R
+import com.example.winiychat.view.activity.login.R
+import com.example.winiychat.view.activity.login.data.LoginFormState
+import com.example.winiychat.view.activity.login.data.model.LoggedInUserView
+import com.example.winiychat.view.activity.login.data.LoginResult
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 

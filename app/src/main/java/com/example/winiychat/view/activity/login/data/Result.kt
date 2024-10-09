@@ -1,4 +1,4 @@
-package com.example.winiychat.view.fragment.login.data
+package com.example.winiychat.view.activity.login.data
 
 /**
  * A generic class that holds a value with its loading status.
