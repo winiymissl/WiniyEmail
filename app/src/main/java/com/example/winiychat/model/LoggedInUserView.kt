@@ -1,4 +1,4 @@
-package com.example.winiychat.view.activity.login.data.model
+package com.example.winiychat.model
 
 /**
  * User details post authentication that is exposed to the UI

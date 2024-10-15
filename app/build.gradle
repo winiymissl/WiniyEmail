@@ -53,6 +53,8 @@ android {
 }
 
 dependencies {
+    //livedataBus
+    implementation 'io.github.jeremyliao:live-event-bus-x:1.8.0'
     //MMKV
     implementation 'com.tencent:mmkv:1.3.9'
     //BaseRecyclerViewAdapterHelper4

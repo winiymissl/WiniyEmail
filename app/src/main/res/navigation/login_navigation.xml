@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/configFragment3"
-        android:name="com.example.winiychat.view.activity.login.LoginConfigFragment"
+        android:name="com.example.winiychat.view.fragment.login.LoginConfigFragment"
         android:label="ConfigFragment">
         <action
             android:id="@+id/action_configFragment3_to_loginFragment"
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.winiychat.view.activity.login.ConfigSuccessLoginFragment"
+        android:name="com.example.winiychat.view.fragment.login.ConfigAllLoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_config_success_login" />
+        tools:layout="@layout/fragment_config_all_login" />
 </navigation>

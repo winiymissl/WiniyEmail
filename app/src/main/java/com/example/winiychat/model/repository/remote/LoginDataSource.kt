@@ -1,7 +1,7 @@
 package com.example.winiychat.model.repository.remote
 
 import com.example.winiychat.model.bean.LoggedInUserConfig
-import com.example.winiychat.view.activity.login.data.Result
+import com.example.winiychat.utils.Result
 import java.io.IOException
 import java.util.UUID
 

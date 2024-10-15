@@ -1,4 +1,4 @@
-package com.example.winiychat.view.activity.login.viewmodel
+package com.example.winiychat.viewmodel.state
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

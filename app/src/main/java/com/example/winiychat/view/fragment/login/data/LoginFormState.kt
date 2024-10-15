@@ -1,4 +1,4 @@
-package com.example.winiychat.view.activity.login.data
+package com.example.winiychat.view.fragment.login.data
 
 /**
  * Data validation state of the login form.

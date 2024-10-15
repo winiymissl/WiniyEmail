@@ -2,7 +2,7 @@ package com.example.winiychat.model.repository.local
 
 import com.example.winiychat.model.bean.LoggedInUserConfig
 import com.example.winiychat.model.repository.remote.LoginDataSource
-import com.example.winiychat.view.activity.login.data.Result
+import com.example.winiychat.utils.Result
 
 /**
  * Class that requests authentication and user information from the remote data source and

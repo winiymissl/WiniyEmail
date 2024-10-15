@@ -1,4 +1,4 @@
-package com.example.winiychat.view.activity.login
+package com.example.winiychat.view.fragment.login
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
