@@ -2,8 +2,8 @@ package com.example.winiychat.viewmodel.state
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.winiychat.model.repository.remote.LoginDataSource
-import com.example.winiychat.model.repository.local.LoginRepository
+import com.example.winiychat.model.repository.remote.LoginRemoteSource
+import com.example.winiychat.model.repository.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.
@@ -16,7 +16,7 @@ class LoginViewModelFactory : ViewModelProvider.Factory {
         if (modelClass.isAssignableFrom(LoginViewModel::class.java)) {
             return LoginViewModel(
                 loginRepository = LoginRepository(
-                    dataSource = LoginDataSource()
+                    dataSource = LoginRemoteSource()
                 )
             ) as T
         }

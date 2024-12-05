@@ -26,6 +26,7 @@ import javax.mail.internet.MimeMessage;
  * }
  */
 public class OkEmail {
+    //创建一个线程池，使用
     public static MimeMessage createEmail() {
         return null;
     }

@@ -1,15 +1,15 @@
-package com.example.winiychat.model.repository.local
+package com.example.winiychat.model.repository
 
 import com.example.winiychat.model.bean.LoggedInUserConfig
-import com.example.winiychat.model.repository.remote.LoginDataSource
-import com.example.winiychat.utils.Result
+import com.example.winiychat.model.repository.remote.LoginRemoteSource
+import com.example.winiychat.extension_utils.Result
 
 /**
  * Class that requests authentication and user information from the remote data source and
  * maintains an in-memory cache of login status and user credentials information.
  */
 
-class LoginRepository(val dataSource: LoginDataSource) {
+class LoginRepository(val dataSource: LoginRemoteSource) {
 
     // in-memory cache of the loggedInUser object
     var user: LoggedInUserConfig? = null
@@ -32,11 +32,9 @@ class LoginRepository(val dataSource: LoginDataSource) {
     fun login(username: String, password: String): Result<LoggedInUserConfig> {
         // handle login
         val result = dataSource.login(username, password)
-
         if (result is Result.Success) {
             setLoggedInUser(result.data)
         }
-
         return result
     }
 

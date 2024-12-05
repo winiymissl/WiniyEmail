@@ -1,4 +1,4 @@
-package com.example.winiychat.utils
+package com.example.winiychat.extension_utils
 
 import android.content.Context
 

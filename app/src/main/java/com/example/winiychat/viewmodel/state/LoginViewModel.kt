@@ -4,19 +4,17 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import android.util.Patterns
-import com.example.winiychat.model.repository.local.LoginRepository
+import com.example.winiychat.model.repository.LoginRepository
 
 import com.example.winiychat.R
-import com.example.winiychat.model.bean.LoggedInUserConfig
 import com.example.winiychat.view.fragment.login.data.LoginFormState
 import com.example.winiychat.view.fragment.login.data.LoginResult
-import com.example.winiychat.utils.Result
-import com.example.winiychat.model.LoggedInUserView
-import com.example.winiychat.viewmodel.application.GlobalViewModel
+import com.example.winiychat.extension_utils.Result
+import com.example.winiychat.application.GlobalViewModel
 
 class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel() {
 
-    private var configEmail = MutableLiveData<GlobalViewModel.UserInfo.EmailConfig>()
+    private var configEmail = MutableLiveData<GlobalViewModel.EmailConfigInfo>()
 
     val _loginForm = MutableLiveData<LoginFormState>()
     val loginFormState: LiveData<LoginFormState> = _loginForm
@@ -25,9 +23,7 @@ class LoginViewModel(private val loginRepository: LoginRepository) : ViewModel()
     val loginResult: LiveData<LoginResult> = _loginResult
 
     fun login(username: String, password: String) {
-        // can be launched in a separate asynchronous job
         val result = loginRepository.login(username, password)
-
         if (result is Result.Success) {
 //            _loginResult.value =
 //                LoginResult(success = LoggedInUserView(displayName = LoggedInUserConfig.displayName))

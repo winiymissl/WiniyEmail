@@ -15,7 +15,7 @@ import com.example.winiychat.viewmodel.request.VerifyEmailEvent
 import com.example.winiychat.viewmodel.state.LoginEmailViewModel
 import com.jeremyliao.liveeventbus.LiveEventBus
 import com.example.winiychat.R
-import com.example.winiychat.viewmodel.application.GlobalViewModel
+import com.example.winiychat.application.GlobalViewModel
 import com.tencent.mmkv.MMKV
 
 class LoginConfigFragment : Fragment() {

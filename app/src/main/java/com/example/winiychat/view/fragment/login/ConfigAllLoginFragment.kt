@@ -5,23 +5,19 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.annotation.StringRes
 import android.os.Bundle
 import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.inputmethod.EditorInfo
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.NavHostFragment
 import com.example.winiychat.R
 import com.example.winiychat.databinding.FragmentConfigAllLoginBinding
 import com.example.winiychat.model.LoggedInUserView
-import com.example.winiychat.viewmodel.application.GlobalViewModel
+import com.example.winiychat.application.GlobalViewModel
 import com.example.winiychat.viewmodel.state.LoginViewModel
 import com.example.winiychat.viewmodel.state.LoginViewModelFactory
-import com.google.android.material.textfield.MaterialAutoCompleteTextView
-import com.tencent.mmkv.MMKV
 
 class ConfigAllLoginFragment : Fragment() {
 
@@ -57,7 +53,7 @@ class ConfigAllLoginFragment : Fragment() {
         binding.MaterialAutoCompleteTextViewProtocol.setSimpleItems(items)
         binding.chipBack.setOnClickListener {
             //更新最新的ViewModel
-            var temp = GlobalViewModel.UserInfo.EmailConfig()
+            var temp = GlobalViewModel.UserInfo.EmailConfigInfo()
             temp.username = binding.TextInputEditTextUsername.editableText.toString()
             temp.password = binding.TextInputEditTextPsswrd.editableText.toString()
             temp.server = binding.TextInputEditTextServer.editableText.toString()
